@@ -1,0 +1,28 @@
+# Development
+pytest==8.4.1
+chardet==5.2.0 # RequestsDependencyWarning: Unable to find acceptable character detection dependency (chardet or charset_normalizer).
+
+
+# Document
+PyMuPDF==1.26.3
+
+
+# Production
+numpy==1.26.4
+pymilvus==2.5.12
+
+
+# Framework
+langchain==0.3.26
+
+
+# VectorDB
+chromadb==1.0.15
+milvus==2.3.5
+milvus-lite==2.5.1
+
+# Length-Based Chunking
+langchain-text-splitters~=0.3.8
+tiktoken==0.9.0
+
+# Text Structured Based Chunking
