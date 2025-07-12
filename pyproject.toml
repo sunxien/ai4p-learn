@@ -1,0 +1,7 @@
+[project]
+name = "ai4p-learn"
+version = "1.0.0"
+dependencies = [
+    "flask>=2.0.0",
+    "pandas",
+]
