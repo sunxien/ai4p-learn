@@ -5,13 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4cdad40a-2f65-42ea-aa6b-291ea15da0fe" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/chunking/LengthBasedChunking.py" beforeDir="false" afterPath="$PROJECT_DIR$/documents/chunking/LengthBasedChunking.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/chunking/TextStructuredBasedChunking.py" beforeDir="false" afterPath="$PROJECT_DIR$/documents/chunking/TextStructuredBasedChunking.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/chunking/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/documents/chunking/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/extractor/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/documents/extractor/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pylang/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylang/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pylang/logger/Logger.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylang/logger/Logger.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pylang/logger/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylang/logger/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pylang/register/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylang/register/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/local_embedding/M3EBaseEmbedding.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/local_embedding/M3eBaseEmbedding.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/local_embedding/PyMilvusEmbedding.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/local_embedding/PyMilvusEmbedding.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/local_embedding/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/local_embedding/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/local_llm/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/local_llm/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/local_reranker/BgeBaseReranker.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/local_reranker/BgeBaseReranker.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/local_reranker/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/local_reranker/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pylang/errors/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylang/errors/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pylang/utils/Utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylang/utils/Utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vectordb/chroma/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/vectordb/chroma/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vectordb/milvus/MilvusOperator.py" beforeDir="false" afterPath="$PROJECT_DIR$/vectordb/milvus/MilvusOperator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vectordb/milvus/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/vectordb/milvus/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vectordb/milvus/temp/default.db" beforeDir="false" afterPath="$PROJECT_DIR$/vectordb/milvus/temp/default.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,14 +55,18 @@
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "Python tests.Python tests for UtilsTest.test_repeat_star.executor": "Run",
+    "Python.BgeBaseReranker.executor": "Run",
     "Python.LengthBasedChunking.executor": "Run",
     "Python.Logger (1).executor": "Run",
     "Python.Logger.executor": "Run",
     "Python.Logging.executor": "Run",
+    "Python.M3eBaseEmbedding.executor": "Run",
     "Python.MilvusConfiguration.executor": "Run",
     "Python.MilvusOperator.executor": "Run",
     "Python.PDFExtractor.executor": "Run",
     "Python.PDFSplitter.executor": "Run",
+    "Python.PyMilvusEmbedding.executor": "Run",
+    "Python.RAGService.executor": "Run",
     "Python.Response.executor": "Run",
     "Python.TextStructuredBasedChunking.executor": "Run",
     "Python.TxTExtractor.executor": "Run",
@@ -64,7 +80,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
     "last_opened_file_path": "/Users/sunxien/Repository/git/ai4p-learn",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -79,8 +95,8 @@
       <recent name="$PROJECT_DIR$/documents/resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Response">
-    <configuration name="Response" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.BgeBaseReranker">
+    <configuration name="BgeBaseReranker" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ai4p-learn" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -89,11 +105,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/open_api" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/models/local_reranker" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/open_api/Response.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/models/local_reranker/BgeBaseReranker.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -102,7 +118,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="WebServer" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="M3eBaseEmbedding" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ai4p-learn" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -111,11 +127,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/open_api" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/models/local_embedding" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/open_api/WebServer.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/models/local_embedding/M3eBaseEmbedding.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -124,7 +140,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="__init__ (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="MilvusOperator" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ai4p-learn" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -133,11 +149,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pylang/logger" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/vectordb/milvus" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pylang/logger/__init__.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/vectordb/milvus/MilvusOperator.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -146,7 +162,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="__init__ (2)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="PyMilvusEmbedding" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ai4p-learn" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -155,11 +171,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pylang" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/models/local_embedding" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pylang/__init__.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/models/local_embedding/PyMilvusEmbedding.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -168,7 +184,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="__init__" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="RAGService" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ai4p-learn" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -177,11 +193,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/open_api" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/service" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/open_api/__init__.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/service/RAGService.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -192,11 +208,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Response" />
-        <item itemvalue="Python.WebServer" />
-        <item itemvalue="Python.__init__ (2)" />
-        <item itemvalue="Python.__init__" />
-        <item itemvalue="Python.__init__ (1)" />
+        <item itemvalue="Python.BgeBaseReranker" />
+        <item itemvalue="Python.RAGService" />
+        <item itemvalue="Python.MilvusOperator" />
+        <item itemvalue="Python.M3eBaseEmbedding" />
+        <item itemvalue="Python.PyMilvusEmbedding" />
       </list>
     </recent_temporary>
   </component>
@@ -216,5 +232,32 @@
       <updated>1752294340926</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/service/RAGService.py</url>
+          <line>50</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="type(related_doc)" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

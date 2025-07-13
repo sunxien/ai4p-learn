@@ -20,16 +20,20 @@ logger = Logger.get_root_logger()
 
 def split_content(content: str):
     return RecursiveCharacterTextSplitter(
-        chunk_size=128,
-        chunk_overlap=24
+        separators=["\n", "\n\n"],
+        chunk_size=30,
+        chunk_overlap=2
     ).split_text(content)
 
+
 # Document
-def split_documents(contents: list):
+def split_documents(documents: list):
     return RecursiveCharacterTextSplitter(
-        chunk_size=128,
-        chunk_overlap=24
-    ).split_documents(contents)
+        separators=["\n", "\n\n"],
+        chunk_size=30,
+        chunk_overlap=2
+    ).split_documents(documents)
+
 
 # Main
 if __name__ == "__main__":

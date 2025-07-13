@@ -29,12 +29,16 @@ def split_content(content: str):
         chunk_overlap=0
     ).split_text(content)
 
-def split_documents(contents: list):
+
+
+def split_documents(documents: list):
     return CharacterTextSplitter.from_tiktoken_encoder(
         encoding_name="cl100k_base",
         chunk_size=128,
         chunk_overlap=16
-    ).split_documents(contents)
+    ).split_documents(documents)
+
+
 
 # Main
 if __name__ == "__main__":

@@ -4,6 +4,7 @@ chardet==5.2.0 # RequestsDependencyWarning: Unable to find acceptable character 
 click==7.1.2 # ModuleNotFoundError: No module named 'click'
 pydantic==2.11.7
 fastapi==0.116.1
+uvicorn~=0.35.0
 orjson==3.10.18
 
 
@@ -14,6 +15,14 @@ PyMuPDF==1.26.3
 # Production
 numpy==1.26.4
 pymilvus==2.5.12
+pymilvus.model==0.3.2
+torch==2.2.2
+huggingface-hub==0.33.4
+sentence-transformers==5.0.0
+transformers==4.48.0  # BetterTransformer requires transformers<4.49 but found 4.53.2.
+modelscope==1.28.0
+infinity-emb==0.0.76
+optimum==1.26.1 # NameError: name 'BetterTransformerManager' is not defined
 
 
 # Framework
@@ -31,4 +40,5 @@ langchain-text-splitters~=0.3.8
 tiktoken==0.9.0
 
 # Text Structured Based Chunking
+
 

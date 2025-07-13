@@ -8,7 +8,7 @@ def start_chat():
         try:
             question = input("请输入您想咨询的问题：")
             # TODO
-            int(question)
+
             print(f"您咨询的问题是：\"{question}\"，但是我还没有完成后续的开发工作。。。")
         except Exception as e:
             print(f"[{type(e).__name__}] 你竟然一个问题把我问倒了。。。{e.args}")
