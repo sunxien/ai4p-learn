@@ -14,12 +14,19 @@
 
 # Connection to huggingface.co timed out
 import os
+
 os.environ['HF_ENDPOINT'] = 'https://hf-mirror.com'
 
 import asyncio
 
 # External Modules
-from infinity_emb import AsyncEmbeddingEngine, EngineArgs
+import torch
+from transformers import AutoTokenizer, AutoModelForSequenceClassification
+from langchain_community.vectorstores import Milvus, FAISS
+from langchain_huggingface import HuggingFaceEmbeddings
+from langchain.retrievers import ContextualCompressionRetriever
+from langchain.retrievers.document_compressors import CrossEncoderReranker
+from langchain_community.cross_encoders import HuggingFaceCrossEncoder
 
 # Current Project Modules
 from pylang.logger import Logger
@@ -27,33 +34,31 @@ logger = Logger.get_root_logger()
 
 class BgeBaseReranker:
 
-    engine: AsyncEmbeddingEngine
+    embeddingsModel: HuggingFaceEmbeddings
+    tokenizer: AutoTokenizer
+    classification: AutoModelForSequenceClassification
 
-    def __init__(self):
-        self.engine = AsyncEmbeddingEngine.from_args(
-            EngineArgs(
-                model_name_or_path="BAAI/bge-reranker-base",
-                device="cpu",
-                engine="torch"
-                # or engine="optimum" for onnx
-            )
-        )
+    def __init__(self, embedding_model_name: str, reranker_model_name: str):
+        self.embeddingsModel = HuggingFaceEmbeddings(model_name=embedding_model_name)
+        self.tokenizer = AutoTokenizer.from_pretrained(reranker_model_name)
+        self.classification = AutoModelForSequenceClassification.from_pretrained(reranker_model_name)
+        self.classification.eval()
+        self.classification.to(torch.device("cuda" if torch.cuda.is_available() else "cpu"))
 
-    # def reranking_documents(self, query: str, docs: list):
-    #     with self.engine:
-    #         ranking, usage = self.engine.rerank(query=query, docs=docs)
-    #         print(list(zip(ranking, docs)))
+    # FIXME run error here
+    def reranking_contents(self, query: str, docs: list):
+        inputs = self.tokenizer([query] * len(docs), [doc for doc in docs])
+        scores = self.classification(**inputs).logits.softmax(dim=-1)[:, 1].tolist()
+        reranking_docs = sorted(zip(docs, scores), key=lambda x: x[1], reverse=True)
+        return [doc for doc, _ in reranking_docs]
 
 
-    async def reranking_documents(self, query: str, docs: list):
-        with self.engine:
-            ranking, usage = await self.engine.rerank(query=query, docs=docs)
-            ranking_docs = list(zip(ranking, docs))
-            for ranking_doc in ranking_docs:
-                # RerankReturnRerankReturnType(relevance_score=3.7410045e-05, document='Paris is in France.', index=1),
-                # 'Paris is in France.'Type
-                logger.info(f"{ranking_doc}")
-
+    # FIXME run error here
+    def reranking_documents(self, query: str, docs: list):
+        inputs = self.tokenizer([query] * len(docs), [doc.page_content for doc in docs])
+        scores = self.classification(**inputs).logits.softmax(dim=-1)[:, 1].tolist()
+        reranking_docs = sorted(zip(docs, scores), key=lambda x: x[1], reverse=True)
+        return [doc for doc, _ in reranking_docs]
 
 #
 query='what is a panda?'
@@ -65,5 +70,11 @@ docs = [
 
 # Main
 if __name__ == "__main__":
-    reranker = BgeBaseReranker()
-    asyncio.run(reranker.reranking_documents(query, docs))
+
+    from modelscope import snapshot_download
+    embedding_model_name = snapshot_download("AI-ModelScope/m3e-base", revision='master')
+
+    reranker_model_name = "BAAI/bge-reranker-base"
+
+    reranker = BgeBaseReranker(embedding_model_name, reranker_model_name)
+    reranked_docs = reranker.reranking_contents(query, docs)

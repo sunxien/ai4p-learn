@@ -17,7 +17,7 @@ os.environ['HF_ENDPOINT'] = 'https://hf-mirror.com'
 import os
 os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
 
-from langchain_community.vectorstores import FAISS
+from langchain_community.vectorstores import Milvus, FAISS
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain.retrievers import ContextualCompressionRetriever
 from langchain.retrievers.document_compressors import CrossEncoderReranker
@@ -41,7 +41,11 @@ class CrossEncoderWithBgeReranker:
     def reranking_contents(self, query: str, docs: list):
         return ContextualCompressionRetriever(
             base_compressor=CrossEncoderReranker(model=self.rerankerModel, top_n=3),
-            base_retriever=FAISS.from_texts(docs, self.embeddingsModel).as_retriever(
+            # # FIXME <MilvusException: (code=2, message=Fail connecting to server on localhost:19530, illegal connection params or server unavailable)>
+            # base_retriever=Milvus.from_texts(docs, self.embeddingsModel).as_retriever(
+            #     search_kwargs={"k": 10}
+            # ),
+            base_retriever = FAISS.from_texts(docs, self.embeddingsModel).as_retriever(
                 search_kwargs={"k": 10}
             )
         ).invoke(query)
@@ -50,6 +54,10 @@ class CrossEncoderWithBgeReranker:
     def reranking_documents(self, query: str, docs: list):
         return ContextualCompressionRetriever(
             base_compressor=CrossEncoderReranker(model=self.rerankerModel, top_n=3),
+            # # FIXME <MilvusException: (code=2, message=Fail connecting to server on localhost:19530, illegal connection params or server unavailable)>
+            # base_retriever=Milvus.from_documents(docs, self.embeddingsModel).as_retriever(
+            #     search_kwargs={"k": 10}
+            # ),
             base_retriever=FAISS.from_documents(docs, self.embeddingsModel).as_retriever(
                 search_kwargs={"k": 10}
             )

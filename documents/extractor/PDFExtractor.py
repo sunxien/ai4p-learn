@@ -37,7 +37,7 @@ def read_pdf_file(file: str):
 
 # Main
 if __name__ == "__main__":
-  read_pages = read_pdf_file("../resources/prompt_template_en.pdf")
+  read_pages = read_pdf_file("../../resources/prompt_template_en.pdf")
   for (page_no, read_page) in enumerate(read_pages):
       logger.info(f"{read_page}")
       logger.info(f"{Utils.repeat_star(64)} Page.{page_no} {Utils.repeat_star(64)}")

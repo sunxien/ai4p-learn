@@ -35,7 +35,7 @@ def read_txt_file(file: str):
 
 # Main
 if __name__ == "__main__":
-  read_lines = read_txt_file("../resources/hot_news.txt")
+  read_lines = read_txt_file("../../resources/hot_news.txt")
   for (page_no, read_line) in enumerate(read_lines):
       logger.info(f"{read_line}")
       logger.info(f"{Utils.repeat_star(64)} Page.{page_no} {Utils.repeat_star(64)}")

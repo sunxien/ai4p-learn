@@ -26,7 +26,7 @@
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 # Current Project Modules
-from documents.resources import Resources
+from resources import Resources
 from pylang.logger import Logger
 from pylang.utils import Utils
 
@@ -35,7 +35,7 @@ logger = Logger.get_root_logger()
 def split_content(content: str):
     return RecursiveCharacterTextSplitter(
         separators=["\n", "\n\n"],
-        chunk_size=32,
+        chunk_size=24,
         chunk_overlap=0
     ).split_text(content)
 
@@ -44,7 +44,7 @@ def split_content(content: str):
 def split_documents(documents: list):
     return RecursiveCharacterTextSplitter(
         separators=["\n", "\n\n"],
-        chunk_size=32,
+        chunk_size=24,
         chunk_overlap=0
     ).split_documents(documents)
 

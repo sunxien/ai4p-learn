@@ -6,15 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="4cdad40a-2f65-42ea-aa6b-291ea15da0fe" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/documents/chunking/LengthBasedChunking.py" beforeDir="false" afterPath="$PROJECT_DIR$/documents/chunking/LengthBasedChunking.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/documents/chunking/TextStructuredBasedChunking.py" beforeDir="false" afterPath="$PROJECT_DIR$/documents/chunking/TextStructuredBasedChunking.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/resources/hot_news.txt" beforeDir="false" afterPath="$PROJECT_DIR$/documents/resources/hot_news.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/extractor/PDFExtractor.py" beforeDir="false" afterPath="$PROJECT_DIR$/documents/extractor/PDFExtractor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/extractor/TxTExtractor.py" beforeDir="false" afterPath="$PROJECT_DIR$/documents/extractor/TxTExtractor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/resources/Resources.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/Resources.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/resources/hot_news.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/hot_news.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/resources/prompt_template_en.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/resources/prompt_template_en.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/local_reranker/BgeBaseReranker.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/local_reranker/BgeBaseReranker.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pylang/logger/Logger.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylang/logger/Logger.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/RAGService.py" beforeDir="false" afterPath="$PROJECT_DIR$/service/RAGService.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vectordb/milvus/MilvusOperator.py" beforeDir="false" afterPath="$PROJECT_DIR$/vectordb/milvus/MilvusOperator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/local_reranker/CrossEncoderWithBgeBaseReranker.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/local_reranker/CrossEncoderWithBgeBaseReranker.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/KnowledgeFile.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/vectordb/milvus/temp/default.db" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,10 +63,13 @@
     "Python.PDFSplitter.executor": "Run",
     "Python.PyMilvusEmbedding.executor": "Run",
     "Python.RAGService.executor": "Run",
+    "Python.Resources.executor": "Run",
     "Python.Response.executor": "Run",
     "Python.TextStructuredBasedChunking.executor": "Run",
     "Python.TxTExtractor.executor": "Run",
     "Python.Utils.executor": "Debug",
+    "Python.WeatherService.executor": "Run",
+    "Python.WeatherServiceTest.executor": "Run",
     "Python.WebServer.executor": "Run",
     "Python.__init__ (1).executor": "Run",
     "Python.__init__ (2).executor": "Run",
@@ -85,10 +91,13 @@
       <recent name="$PROJECT_DIR$/vectordb/chroma" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/service" />
       <recent name="$PROJECT_DIR$/documents/resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.WeatherService">
     <configuration name="BgeBaseReranker" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ai4p-learn" />
       <option name="ENV_FILES" value="" />
@@ -111,7 +120,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="CrossEncoderWithBgeBaseReranker" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Resources" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ai4p-learn" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -120,11 +129,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/models/local_reranker" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/resources" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/models/local_reranker/CrossEncoderWithBgeBaseReranker.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/resources/Resources.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -133,29 +142,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="MilvusOperator" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="ai4p-learn" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/vectordb/milvus" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/vectordb/milvus/MilvusOperator.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="RAGService" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="WeatherService" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ai4p-learn" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -168,7 +155,29 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/service/RAGService.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/service/WeatherService.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="WeatherServiceTest" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ai4p-learn" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/resoures" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/resoures/WeatherServiceTest.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -201,11 +210,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.main" />
-        <item itemvalue="Python.MilvusOperator" />
-        <item itemvalue="Python.RAGService" />
-        <item itemvalue="Python.CrossEncoderWithBgeBaseReranker" />
+        <item itemvalue="Python.WeatherService" />
+        <item itemvalue="Python.WeatherServiceTest" />
+        <item itemvalue="Python.Resources" />
         <item itemvalue="Python.BgeBaseReranker" />
+        <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
   </component>
@@ -238,10 +247,23 @@
     </option>
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/service/WeatherService.py</url>
+          <line>69</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
         <watch expression="type(related_doc)" />
         <watch expression="summary + '&gt;&gt; 资料已全部显示完毕。' + current_datetime() + '\n'" />
+        <watch expression="if not json_string and json_string.strip() != &quot;&quot;" />
+        <watch expression="json_string.strip() != &quot;&quot;" />
+        <watch expression="status != '200'" />
+        <watch expression="get_today_weather_response['forecast']" />
       </configuration>
     </watches-manager>
   </component>

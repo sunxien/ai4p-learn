@@ -27,10 +27,9 @@
 
 # External Modules
 from langchain_text_splitters import CharacterTextSplitter
-from huggingface_hub import hf_hub_download
 
 # Current Project Modules
-from documents.resources import Resources
+from resources import Resources
 from pylang.logger import Logger
 from pylang.utils import Utils
 
@@ -39,7 +38,7 @@ logger = Logger.get_root_logger()
 def split_content(content: str):
     return CharacterTextSplitter.from_tiktoken_encoder(
         encoding_name="cl100k_base",
-        chunk_size=32,
+        chunk_size=24,
         chunk_overlap=0
     ).split_text(content)
 
@@ -48,7 +47,7 @@ def split_content(content: str):
 def split_documents(documents: list):
     return CharacterTextSplitter.from_tiktoken_encoder(
         encoding_name="cl100k_base",
-        chunk_size=32,
+        chunk_size=24,
         chunk_overlap=0
     ).split_documents(documents)
 

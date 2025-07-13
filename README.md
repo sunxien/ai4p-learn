@@ -1,6 +1,6 @@
 # ai4p-learn
 > Learning AI for Python Developers. Include RAG, Agent, Chat etc <br>
-> Author: Eric <br>
+> Author: Sun Xi'En <br>
 > Date: 2025-07-12 12:49:00
 > Since: 1.0.0
 
@@ -13,11 +13,12 @@
 
 ### Document Parser
 - PDF
+- Plain Text
 - Markdown
 
 ### Text Chunking
-- with Fixed Length
-- with Context Aware
+- Length based
+- Text structured based
 
 ### Embedding Model
 - pymilvus model

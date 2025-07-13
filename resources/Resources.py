@@ -11,6 +11,9 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+import os
+
+from pylang.utils.Utils import *
 
 content = '''Handling non-uniform document lengths: Real-world document collections often contain texts of varying sizes. Splitting ensures consistent processing across all documents.\n
     Overcoming model limitations: Many embedding models and language models have maximum input size constraints. Splitting allows us to process documents that would otherwise exceed these limits.\n
@@ -27,3 +30,23 @@ documents = [
     "Enhancing retrieval precision: In information retrieval systems, splitting can improve the granularity of search results, allowing for more precise matching of queries to relevant document sections.",
     "Optimizing computational resources: Working with smaller chunks of text can be more memory-efficient and allow for better parallelization of processing tasks.",
 ]
+
+
+CITY_CODE_JSON_FILE = join_paths(filedir(__file__),"citycode-2019-08-23.json")
+
+def get_city_code(city_name: str):
+    if not city_name or city_name == "":
+        raise RuntimeError(f"city name: {city_name} is invalid")
+
+    if os.path.exists(CITY_CODE_JSON_FILE):
+        import json
+        with open(CITY_CODE_JSON_FILE, 'r', encoding='utf-8') as jf:
+            json_array = json.load(jf)
+            # print(type(json_array))
+            for json_elem in json_array:
+                # print(type(json_elem))
+                # print(json_elem['city_name'], json_elem['city_code'])
+                if json_elem['city_name'] == city_name:
+                    return json_elem['city_code']
+    else:
+        raise RuntimeError(f"{CITY_CODE_JSON_FILE} is not found")

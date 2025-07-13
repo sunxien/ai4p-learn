@@ -5,7 +5,7 @@ from service.RAGService import *
 
 logger = Logger.get_root_logger()
 
-HOT_NEWS_FILE = "documents/resources/hot_news.txt"
+HOT_NEWS_FILE = "resources/hot_news.txt"
 
 def init_rag_service():
     rag_service_impl = RAGService("ai4p")
@@ -16,14 +16,17 @@ def init_rag_service():
 
 def start_chat_session(rs: RAGService):
     while True:
+        question = ""
         try:
             print("\n")
-            question = input("请输入您想咨询的问题：")
+            question = question + input("请输入您想咨询的问题：")
             related_knowledge_list = rs.search_knowledge(question)
             print(knowledge_summary(related_knowledge_list))
         except Exception as e:
+            print(e)
             print('你竟然一个问题把我问倒了....')
-            # logger.critical(f"[{type(e).__name__}] 你竟然一个问题把我问倒了....{e.args}")
+            logger.critical(f"问题：\"{question}\" [{type(e).__name__}] {e.args}")
+
 
 def knowledge_summary(knowledge_list: list) -> str:
     knowledge_count = len(knowledge_list)
