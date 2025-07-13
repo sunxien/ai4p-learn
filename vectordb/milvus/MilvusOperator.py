@@ -78,7 +78,10 @@ class MilvusOperator:
             result = self.client.insert(collection_name=collection_name, data=data)
             logger.info(f"Insert documents into \"{collection_name}\" success. {result}")
         else:
-            raise RuntimeError(f"collection: {collection_name} is not exists, please create it firstly")
+            # Bad Implementation
+            logger.info(f"collection: {collection_name} is not exists! create it now")
+            self.create_collection(collection_name)
+            self.insert_documents(collection_name, data)
 
 
     def search_documents(self, collection_name: str, query_vectors: list):

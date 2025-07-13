@@ -39,7 +39,7 @@ logger = Logger.get_root_logger()
 def split_content(content: str):
     return CharacterTextSplitter.from_tiktoken_encoder(
         encoding_name="cl100k_base",
-        chunk_size=100,
+        chunk_size=32,
         chunk_overlap=0
     ).split_text(content)
 
@@ -48,8 +48,8 @@ def split_content(content: str):
 def split_documents(documents: list):
     return CharacterTextSplitter.from_tiktoken_encoder(
         encoding_name="cl100k_base",
-        chunk_size=128,
-        chunk_overlap=16
+        chunk_size=32,
+        chunk_overlap=0
     ).split_documents(documents)
 
 

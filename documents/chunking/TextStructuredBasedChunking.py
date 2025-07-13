@@ -35,8 +35,8 @@ logger = Logger.get_root_logger()
 def split_content(content: str):
     return RecursiveCharacterTextSplitter(
         separators=["\n", "\n\n"],
-        chunk_size=30,
-        chunk_overlap=2
+        chunk_size=32,
+        chunk_overlap=0
     ).split_text(content)
 
 
@@ -44,8 +44,8 @@ def split_content(content: str):
 def split_documents(documents: list):
     return RecursiveCharacterTextSplitter(
         separators=["\n", "\n\n"],
-        chunk_size=30,
-        chunk_overlap=2
+        chunk_size=32,
+        chunk_overlap=0
     ).split_documents(documents)
 
 

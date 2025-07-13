@@ -23,6 +23,7 @@ from infinity_emb import AsyncEmbeddingEngine, EngineArgs
 
 # Current Project Modules
 from pylang.logger import Logger
+logger = Logger.get_root_logger()
 
 class BgeBaseReranker:
 
@@ -38,11 +39,20 @@ class BgeBaseReranker:
             )
         )
 
+    # def reranking_documents(self, query: str, docs: list):
+    #     with self.engine:
+    #         ranking, usage = self.engine.rerank(query=query, docs=docs)
+    #         print(list(zip(ranking, docs)))
 
-    async def reranking(self, query: str, docs: list):
-        async with self.engine:
+
+    async def reranking_documents(self, query: str, docs: list):
+        with self.engine:
             ranking, usage = await self.engine.rerank(query=query, docs=docs)
-            print(list(zip(ranking, docs)))
+            ranking_docs = list(zip(ranking, docs))
+            for ranking_doc in ranking_docs:
+                # RerankReturnRerankReturnType(relevance_score=3.7410045e-05, document='Paris is in France.', index=1),
+                # 'Paris is in France.'Type
+                logger.info(f"{ranking_doc}")
 
 
 #
@@ -53,7 +63,7 @@ docs = [
     "Paris is in France."
 ]
 
+# Main
 if __name__ == "__main__":
     reranker = BgeBaseReranker()
-    asyncio.run(reranker.reranking(query, docs))
-    pass
+    asyncio.run(reranker.reranking_documents(query, docs))

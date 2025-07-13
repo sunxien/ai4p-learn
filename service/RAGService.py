@@ -12,15 +12,25 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Connection to huggingface.co timed out
+import os
+os.environ['HF_ENDPOINT'] = 'https://hf-mirror.com'
+
+# Temporary Solution  (it will cause crash!!!)
+import os
+os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
+
 # Current Project Modules
 from pymilvus import SearchResult
 from pymilvus.client.search_result import HybridHits
+from sympy.vector import Cross
 
 from models.local_embedding.M3eBaseEmbedding import M3eBaseEmbedding
 from documents.extractor.PDFExtractor import read_pdf_file
 from documents.extractor.TxTExtractor import read_txt_file
 from documents.chunking.TextStructuredBasedChunking import split_content
 from models.local_embedding.PyMilvusEmbedding import PyMilvusEmbedding
+from models.local_reranker.CrossEncoderWithBgeBaseReranker import CrossEncoderWithBgeReranker
 from vectordb.milvus.Configuration import Configuration
 from vectordb.milvus.MilvusOperator import MilvusOperator
 
@@ -36,11 +46,17 @@ class RAGService:
     # todo does it oop?
     embed: M3eBaseEmbedding
     persist: MilvusOperator
+    reranker: CrossEncoderWithBgeReranker
 
     def __init__(self, collection_name: str):
         self.collection_name = collection_name
         self.embed = M3eBaseEmbedding()
         self.persist = MilvusOperator(Configuration(True))
+
+        from modelscope import snapshot_download
+        embedding_model_name = snapshot_download("AI-ModelScope/m3e-base", revision='master')
+        reranker_model_name = "BAAI/bge-reranker-base"
+        self.reranker = CrossEncoderWithBgeReranker(embedding_model_name, reranker_model_name)
 
     def load_documents(self, filetype: str, filepath: str):
         if filetype == "pdf":
@@ -69,12 +85,18 @@ class RAGService:
             else:
                 raise RuntimeError(f"not HybridHits type")
 
-        for related_content in related_contents:
-            logger.info(related_content)
+        if len(related_contents) == 0:
+            return related_contents
 
-        # todo prepare prompt template
-        # todo send to LLM
-        # todo agent, function call, mcp
+        # for related_content in related_contents:
+        #     logger.info(related_content)
+
+        reranking_docs = self.reranker.reranking_contents(query, related_contents)
+
+        # for reranking_doc in reranking_docs:
+        #     logger.info(reranking_doc)
+
+        return reranking_docs
 
 
 if __name__ == "__main__":

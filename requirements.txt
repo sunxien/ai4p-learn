@@ -28,6 +28,9 @@ optimum==1.26.1 # NameError: name 'BetterTransformerManager' is not defined
 # Framework
 huggingface-hub~=0.33.4
 langchain==0.3.26
+langchain-community==0.3.27 # For CrossEncoderReranker
+langchain-huggingface==0.3.0 # For CrossEncoderReranker
+faiss-cpu==1.11.0 # Could not import faiss python package.
 
 
 # VectorDB
