@@ -6,24 +6,27 @@
   <component name="ChangeListManager">
     <list default="true" id="4cdad40a-2f65-42ea-aa6b-291ea15da0fe" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/chunking/DocumentStructuredBasedChunking.py" beforeDir="false" afterPath="$PROJECT_DIR$/documents/chunking/DocumentStructuredBasedChunking.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/documents/chunking/LengthBasedChunking.py" beforeDir="false" afterPath="$PROJECT_DIR$/documents/chunking/LengthBasedChunking.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/chunking/SemanticMeaningBasedChunking.py" beforeDir="false" afterPath="$PROJECT_DIR$/documents/chunking/SemanticMeaningBasedChunking.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/documents/chunking/TextStructuredBasedChunking.py" beforeDir="false" afterPath="$PROJECT_DIR$/documents/chunking/TextStructuredBasedChunking.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/chunking/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/documents/chunking/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/extractor/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/documents/extractor/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/local_embedding/M3EBaseEmbedding.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/local_embedding/M3eBaseEmbedding.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/extractor/PDFExtractor.py" beforeDir="false" afterPath="$PROJECT_DIR$/documents/extractor/PDFExtractor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/extractor/TxTExtractor.py" beforeDir="false" afterPath="$PROJECT_DIR$/documents/extractor/TxTExtractor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/resources/Resources.py" beforeDir="false" afterPath="$PROJECT_DIR$/documents/resources/Resources.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/local_embedding/M3eBaseEmbedding.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/local_embedding/M3eBaseEmbedding.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/local_embedding/PyMilvusEmbedding.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/local_embedding/PyMilvusEmbedding.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/local_embedding/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/local_embedding/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/local_llm/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/local_llm/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/local_reranker/BgeBaseReranker.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/local_reranker/BgeBaseReranker.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/local_reranker/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/local_reranker/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pylang/errors/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylang/errors/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pylang/utils/Utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylang/utils/Utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vectordb/chroma/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/vectordb/chroma/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/open_api/Response.py" beforeDir="false" afterPath="$PROJECT_DIR$/open_api/Response.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/open_api/WebServer.py" beforeDir="false" afterPath="$PROJECT_DIR$/open_api/WebServer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pylang/errors/Errors.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylang/errors/Errors.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pylang/logger/Logger.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylang/logger/Logger.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/KnowledgeFile.py" beforeDir="false" afterPath="$PROJECT_DIR$/service/KnowledgeFile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/RAGService.py" beforeDir="false" afterPath="$PROJECT_DIR$/service/RAGService.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/pylang/utils/UtilsTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/pylang/utils/UtilsTest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vectordb/chroma/ChromaOperator.py" beforeDir="false" afterPath="$PROJECT_DIR$/vectordb/chroma/ChromaOperator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vectordb/chroma/Configuration.py" beforeDir="false" afterPath="$PROJECT_DIR$/vectordb/chroma/Configuration.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vectordb/milvus/Configuration.py" beforeDir="false" afterPath="$PROJECT_DIR$/vectordb/milvus/Configuration.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vectordb/milvus/MilvusOperator.py" beforeDir="false" afterPath="$PROJECT_DIR$/vectordb/milvus/MilvusOperator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vectordb/milvus/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/vectordb/milvus/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vectordb/milvus/temp/default.db" beforeDir="false" afterPath="$PROJECT_DIR$/vectordb/milvus/temp/default.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -249,7 +252,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/service/RAGService.py</url>
-          <line>50</line>
+          <line>64</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
