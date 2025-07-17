@@ -21,11 +21,30 @@ logging.basicConfig(
     # filename="ai4p-learn.log"
 )
 
-def get_root_logger():
-    return logging
+# Filter 3rd party libs
+logging.getLogger("httpx").setLevel(logging.WARNING)
 
-def get_logger(logger_name: str):
-    return logging.getLogger(logger_name)
+class ModuleFilter(logging.Filter):
+
+    def __init__(self, exclude_modules: list):
+        super().__init__()
+        self.exclude_modules = exclude_modules
+
+    def filter(self, record):
+        if not self.exclude_modules or len(self.exclude_modules) == 0:
+            return True
+        return record.module not in self.exclude_modules
+
+
+def get_root_logger(*args):
+    inner_logger = logging.getLogger("root")
+    inner_logger.addFilter(ModuleFilter(args))
+    return inner_logger
+
+def get_logger(logger_name: str, *args):
+    inner_logger = logging.getLogger(logger_name)
+    inner_logger.addFilter(ModuleFilter(args))
+    return inner_logger
 
 if __name__ == "__main__":
     logger = get_root_logger()

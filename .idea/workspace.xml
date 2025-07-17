@@ -6,33 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="4cdad40a-2f65-42ea-aa6b-291ea15da0fe" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/chunking/DocumentStructuredBasedChunking.py" beforeDir="false" afterPath="$PROJECT_DIR$/documents/chunking/document_structured_based_chunking.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/chunking/LengthBasedChunking.py" beforeDir="false" afterPath="$PROJECT_DIR$/documents/chunking/length_based_chunking.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/chunking/SemanticMeaningBasedChunking.py" beforeDir="false" afterPath="$PROJECT_DIR$/documents/chunking/semantic_meaning_based_chunking.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/chunking/TextStructuredBasedChunking.py" beforeDir="false" afterPath="$PROJECT_DIR$/documents/chunking/text_structured_based_chunking.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/extractor/PDFExtractor.py" beforeDir="false" afterPath="$PROJECT_DIR$/documents/extractor/pdf_extractor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/extractor/TxTExtractor.py" beforeDir="false" afterPath="$PROJECT_DIR$/documents/extractor/txt_extractor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/local_embedding/M3eBaseEmbedding.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/local_embedding/m3e_base_embedding.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/local_embedding/PyMilvusEmbedding.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/local_embedding/pymilvus_embedding.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/local_reranker/BgeBaseReranker.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/local_reranker/bge_base_reranker.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/local_reranker/CrossEncoderWithBgeBaseReranker.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/local_reranker/cross_encoder_with_bge_base_reranker.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/open_api/Response.py" beforeDir="false" afterPath="$PROJECT_DIR$/open_api/response.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/open_api/WebServer.py" beforeDir="false" afterPath="$PROJECT_DIR$/open_api/web_server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pylang/errors/Errors.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylang/errors/errors.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pylang/logger/Logger.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylang/logger/logger.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pylang/utils/Utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylang/utils/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Resources.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/local_resources.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/RAGService.py" beforeDir="false" afterPath="$PROJECT_DIR$/service/rag_service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/WeatherService.py" beforeDir="false" afterPath="$PROJECT_DIR$/service/weather_service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/pylang/utils/UtilsTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/pylang/utils/utils_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/resoures/WeatherServiceTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/resoures/weather_service_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vectordb/chroma/ChromaOperator.py" beforeDir="false" afterPath="$PROJECT_DIR$/vectordb/chroma/chroma_operator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vectordb/chroma/Configuration.py" beforeDir="false" afterPath="$PROJECT_DIR$/vectordb/chroma/configuration.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vectordb/milvus/Configuration.py" beforeDir="false" afterPath="$PROJECT_DIR$/vectordb/milvus/configuration.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vectordb/milvus/MilvusOperator.py" beforeDir="false" afterPath="$PROJECT_DIR$/vectordb/milvus/milvus_operator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vectordb/milvus/temp/default.db" beforeDir="false" afterPath="$PROJECT_DIR$/vectordb/milvus/temp/default.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/external_calls/tool_calls/chat_agent_with_tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/external_calls/tool_calls/chat_agent_with_tools.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/open_api/response.py" beforeDir="false" afterPath="$PROJECT_DIR$/open_api/http_response.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pylang/logger/logger.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylang/logger/logger.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,6 +67,7 @@
     "Python.__init__ (2).executor": "Run",
     "Python.__init__.executor": "Run",
     "Python.chat_agent_with_tools.executor": "Run",
+    "Python.logger.executor": "Run",
     "Python.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -203,7 +180,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="txt_extractor" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="logger" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ai4p-learn" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -212,11 +189,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/documents/extractor" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pylang/logger" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/documents/extractor/txt_extractor.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pylang/logger/logger.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -228,10 +205,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.chat_agent_with_tools" />
+        <item itemvalue="Python.logger" />
         <item itemvalue="Python.QwenAgent" />
         <item itemvalue="Python.FunctionCalls" />
         <item itemvalue="Python.cross_encoder_with_bge_base_reranker" />
-        <item itemvalue="Python.txt_extractor" />
       </list>
     </recent_temporary>
   </component>
@@ -272,6 +249,9 @@
         <watch expression="json_string.strip() != &quot;&quot;" />
         <watch expression="status != '200'" />
         <watch expression="get_today_weather_response['forecast']" />
+        <watch expression="record.module not in self.exclude_modules" />
+        <watch expression="self.exclude_modules" />
+        <watch expression="record.module" />
       </configuration>
     </watches-manager>
   </component>

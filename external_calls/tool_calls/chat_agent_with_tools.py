@@ -4,6 +4,7 @@ import os
 from openai import OpenAI
 from dotenv import load_dotenv
 
+from external_calls.tool_calls.llm_response import LlmResponse
 from pylang.utils import utils
 from service.weather_service import WeatherService
 
@@ -31,7 +32,7 @@ tools=[
     {
         "type": "function",
         "function": {
-            "name": "get_current_datetime",
+            "name": "get_current_time",
             "description": "获取当前的日期时间",
             "parameters": {
             }
@@ -63,34 +64,33 @@ def get_completion(messages):
         messages=messages,
         tools=tools
     )
-    print(completion.model_dump_json(indent=4))
+    # print(f"{completion.model_dump_json()}")
+    # print(f"{completion.model_dump_json(indent=4)}")
     return completion.model_dump()
 
 
-def chat_with_qwen_max():
-    print('\n')
-    messages = [
-        {
-            "role": "user",
-            "content": input('请输入您想要咨询的问题：')
-        }
-    ]
-    print("-" * 60)
+# messages = [{ "role": "user", "content": input('请输入您想要咨询的问题：') }]
+
+def chat_with_qwen_max(messages: list) -> LlmResponse:
+    print("-" * 120)
 
     # ***************************** 模型的第一轮调用 *****************************
     i = 1
     first_response = get_completion(messages)
-    assistant_output = first_response['choices'][0]['message']
-    print(f"\n第{i}轮大模型交互响应：{first_response}\n")
+    print(f"第{i}轮大模型交互响应：{first_response}")
 
+    assistant_output = first_response['choices'][0]['message']
     if assistant_output['content'] is None:
         assistant_output['content'] = ""
+
     messages.append(assistant_output)
 
     # 如果不需要调用工具，则直接返回最终答案
-    if assistant_output['tool_calls'] == None:  # 如果模型判断无需调用工具，则将assistant的回复直接打印出来，无需进行模型的第二轮调用
-        print(f"无需调用工具，直接回复：{assistant_output['content']}")
-        return
+    # 如果模型判断无需调用工具，则将assistant的回复直接打印出来，无需进行模型的第二轮调用
+    if assistant_output['tool_calls'] == None:
+        print(f">>> 没有可以调用的工具。")
+        #print(f"没有可以调用的工具。直接回复：{assistant_output['content']}")
+        return LlmResponse("question", assistant_output['content'])
 
     # 如果需要调用工具，则进行模型的多轮调用，直到模型判断无需调用工具
     while assistant_output['tool_calls'] != None:
@@ -106,9 +106,10 @@ def chat_with_qwen_max():
             tool_info["name"]="get_current_time"
             tool_info['content'] = utils.get_current_time()
 
-        print(f"工具输出信息：{tool_info['content']}\n")
-        print("-" * 60)
         messages.append(tool_info)
+
+        print(f">>> 调用工具返回信息：{tool_info['content']}")
+        print("-" * 120)
 
         assistant_output = get_completion(messages)['choices'][0]['message']
         if assistant_output['content'] is None:
@@ -116,14 +117,36 @@ def chat_with_qwen_max():
 
         messages.append(assistant_output)
         i += 1
-        print(f"第{i}轮大模型交互响应：{assistant_output}\n")
+        print(f"第{i}轮大模型交互响应：{assistant_output}")
 
     # ********************************************************************************
-    print(f"最终答案：{assistant_output['content']}")
+    return LlmResponse("answer", assistant_output['content'])
 
+
+
+messages = []
 
 # Main
 if __name__ == "__main__":
-
+    question_desc="请输入您想要咨询的问题："
     while True:
-        chat_with_qwen_max()
+        question=input(f"{question_desc}")
+        if question.strip() == "":
+            continue
+
+        messages.append({ "role": "user", "content": f"{question}" })
+        print(messages)
+
+        llm_response=chat_with_qwen_max(messages)
+        if llm_response.type == "question":
+            question_desc=llm_response.message
+            if "再见" in question_desc:
+                question_desc = "请输入您想要咨询的问题："
+        elif llm_response.type == "answer":
+            print('-' * 120)
+            print(f"回复：{llm_response.message}")
+            print('-' * 120)
+            question_desc="请输入您想要咨询的问题："
+            messages.clear()
+        else:
+            raise RuntimeError(f"Unknown llm response: {llm_response}")

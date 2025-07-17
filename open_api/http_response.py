@@ -14,7 +14,7 @@
 
 import orjson
 
-class Response:
+class HttpResponse:
 
     code: int
     data: str = None
@@ -31,5 +31,5 @@ class Response:
 
 # Main
 if __name__ == "__main__":
-    resp = Response(200, "7532.22", "success")
+    resp = HttpResponse(200, "7532.22", "success")
     print(resp.to_json_string())
