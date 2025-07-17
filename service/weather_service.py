@@ -4,16 +4,15 @@ import json
 import requests
 
 # External Modules
-from pylang.utils.Utils import current_dir, parent_dir, join_paths
-from resources.Resources import *
-from pylang.logger import Logger
+from resources.local_resources import *
+from pylang.logger import logger
 
-logger = Logger.get_root_logger()
+logger = logger.get_root_logger()
 
 def get_weather(city_name: str) -> json:
     city_code = get_city_code(city_name)
     uri = f"http://t.weather.sojson.com/api/weather/city/{city_code}"
-    logger.warning(f"URI: {uri}")
+    # logger.warning(f"URI: {uri}")
     return json.loads(requests.get(uri).content)
 
 class WeatherService:
@@ -117,6 +116,10 @@ class WeatherService:
 
         return city_name + "\n" + "\n".join(two_weeks_forecasts)
 
+
+# ****************************************************
+
+# ****************************************************
 
 # Main: https://www.sojson.com/blog/305.html
 if __name__ == "__main__":

@@ -27,7 +27,7 @@
 # Code: Split by functions, classes, or logical blocks
 
 # Project Modules
-from pylang.logger import Logger
+from pylang.logger import logger
 
 logger = Logger.get_root_logger()
 

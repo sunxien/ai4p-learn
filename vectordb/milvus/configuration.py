@@ -16,7 +16,7 @@
 from pydantic import BaseModel
 
 # Current Project Modules
-from pylang.logger import Logger
+from pylang.logger import logger
 
 logger = Logger.get_root_logger()
 

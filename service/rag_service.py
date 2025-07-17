@@ -25,17 +25,17 @@ from pymilvus import SearchResult
 from pymilvus.client.search_result import HybridHits
 from sympy.vector import Cross
 
-from models.local_embedding.M3eBaseEmbedding import M3eBaseEmbedding
-from documents.extractor.PDFExtractor import read_pdf_file
-from documents.extractor.TxTExtractor import read_txt_file
-from documents.chunking.TextStructuredBasedChunking import split_content
-from models.local_embedding.PyMilvusEmbedding import PyMilvusEmbedding
-from models.local_reranker.CrossEncoderWithBgeBaseReranker import CrossEncoderWithBgeReranker
-from vectordb.milvus.Configuration import Configuration
-from vectordb.milvus.MilvusOperator import MilvusOperator
+from models.local_embedding.m3e_base_embedding import M3eBaseEmbedding
+from documents.extractor.pdf_extractor import read_pdf_file
+from documents.extractor.txt_extractor import read_txt_file
+from documents.chunking.text_structured_based_chunking import split_content
+from models.local_embedding.pymilvus_embedding import PyMilvusEmbedding
+from models.local_reranker.cross_encoder_with_bge_base_reranker import CrossEncoderWithBgeReranker
+from vectordb.milvus.configuration import Configuration
+from vectordb.milvus.milvus_operator import MilvusOperator
 
-from pylang.utils.Utils import current_dir, parent_dir, join_paths
-from pylang.logger import Logger
+from pylang.utils.utils import current_dir, parent_dir, join_paths
+from pylang.logger import logger
 
 logger = Logger.get_root_logger()
 
@@ -100,7 +100,7 @@ class RAGService:
 
 
 if __name__ == "__main__":
-    hot_news = join_paths(parent_dir(current_dir()), "documents", "resources", "hot_news.txt")
+    hot_news = join_paths(parent_dir(current_dir()),  "resources", "hot_news.txt")
     logger.info(hot_news)
 
     rag_service = RAGService("ai4p")

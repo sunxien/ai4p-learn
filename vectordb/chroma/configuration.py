@@ -12,8 +12,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from pylang.utils import Utils
+# External Modules
+from pydantic import BaseModel
 
-def test_repeat_star():
-    result = Utils.repeat_star(3)
-    assert result == "***"
+# Current Project Modules
+from pylang.logger import logger
+
+logger = Logger.get_root_logger()
+
+class Configuration(BaseModel):
+
+    def __init__(self):
+        pass

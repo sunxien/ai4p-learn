@@ -13,7 +13,7 @@
 # limitations under the License.
 import os
 
-from pylang.utils.Utils import *
+from pylang.utils.utils import *
 
 content = '''Handling non-uniform document lengths: Real-world document collections often contain texts of varying sizes. Splitting ensures consistent processing across all documents.\n
     Overcoming model limitations: Many embedding models and language models have maximum input size constraints. Splitting allows us to process documents that would otherwise exceed these limits.\n

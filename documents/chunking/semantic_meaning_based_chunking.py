@@ -24,7 +24,7 @@
 # This technique helps create chunks that are more semantically coherent, potentially improving the quality of downstream tasks like retrieval or summarization.
 
 # Project Modules
-from pylang.logger import Logger
+from pylang.logger import logger
 
 logger = Logger.get_root_logger()
 

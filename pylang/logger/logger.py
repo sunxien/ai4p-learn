@@ -12,15 +12,21 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# External Modules
-from pydantic import BaseModel
+import logging
 
-# Current Project Modules
-from pylang.logger import Logger
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [%(name)s:%(thread)d] %(levelname)s %(filename)s[:%(lineno)d] %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S"
+    # filename="ai4p-learn.log"
+)
 
-logger = Logger.get_root_logger()
+def get_root_logger():
+    return logging
 
-class Configuration(BaseModel):
+def get_logger(logger_name: str):
+    return logging.getLogger(logger_name)
 
-    def __init__(self):
-        pass
+if __name__ == "__main__":
+    logger = get_root_logger()
+    logger.info("Hello World")

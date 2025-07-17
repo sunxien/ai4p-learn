@@ -29,7 +29,7 @@ from langchain.retrievers.document_compressors import CrossEncoderReranker
 from langchain_community.cross_encoders import HuggingFaceCrossEncoder
 
 # Current Project Modules
-from pylang.logger import Logger
+from pylang.logger import logger
 logger = Logger.get_root_logger()
 
 class BgeBaseReranker:

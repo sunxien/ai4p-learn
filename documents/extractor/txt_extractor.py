@@ -13,23 +13,21 @@
 # limitations under the License.
 
 # System Libs
-import pymupdf # imports the pymupdf library
 import time
 
 # Project Modules
-from pylang.logger import Logger
-from pylang.utils import Utils
+from pylang.logger import logger
+from pylang.utils import utils
 
 logger = Logger.get_root_logger()
 
-def read_pdf_file(file: str):
+def read_txt_file(file: str):
   begin = time.perf_counter()
   try:
     contents = []
-    pages = pymupdf.open(file) # open a document
-    for (index, page) in enumerate(pages): # iterate the document pages
-      text = page.get_text() # get plain text encoded as UTF-8
-      contents.append(text)
+    lines = open(file).readlines()
+    for line in lines:
+        contents.append(line.strip())
     return contents
   finally:
     elapsed = round(time.perf_counter()-begin, 2)
@@ -37,7 +35,7 @@ def read_pdf_file(file: str):
 
 # Main
 if __name__ == "__main__":
-  read_pages = read_pdf_file("../../resources/prompt_template_en.pdf")
-  for (page_no, read_page) in enumerate(read_pages):
-      logger.info(f"{read_page}")
-      logger.info(f"{Utils.repeat_star(64)} Page.{page_no} {Utils.repeat_star(64)}")
+  read_lines = read_txt_file("../../resources/hot_news.txt")
+  for (page_no, read_line) in enumerate(read_lines):
+      logger.info(f"{read_line}")
+      logger.info(f"{utils.repeat_star(64)} Page.{page_no} {utils.repeat_star(64)}")

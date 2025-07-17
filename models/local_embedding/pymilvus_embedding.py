@@ -21,9 +21,9 @@ from pymilvus import model
 from pymilvus.model import DefaultEmbeddingFunction
 
 # Current Project Modules
-from pylang.logger import Logger
+from pylang.logger import logger
 
-logger = Logger.get_root_logger()
+logger = logger.get_root_logger()
 
 class PyMilvusEmbedding:
 

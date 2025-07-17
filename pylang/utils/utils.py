@@ -1,10 +1,14 @@
 import os
+import pathlib
 import time
+
+def home_dir():
+    return str(pathlib.Path.home())
 
 def repeat_star(count: int):
     return "*" * count
 
-def current_datetime():
+def get_current_time():
     current_timestamp = time.time()
     local_time = time.localtime(current_timestamp)
     return time.strftime('%Y-%m-%d %H:%M:%S', local_time)

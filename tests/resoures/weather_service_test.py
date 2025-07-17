@@ -1,5 +1,5 @@
 
-from pylang.utils.Utils import *
+from pylang.utils.utils import *
 
 RESPONSE_JSON_FILE = join_paths(filedir(__file__),"weather_response.json")
 

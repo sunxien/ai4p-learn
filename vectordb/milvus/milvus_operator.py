@@ -19,12 +19,12 @@ import time
 # External Modules
 from pymilvus import MilvusClient
 
-from models.local_embedding.M3eBaseEmbedding import M3eBaseEmbedding
-from models.local_embedding.PyMilvusEmbedding import PyMilvusEmbedding
+from models.local_embedding.m3e_base_embedding import M3eBaseEmbedding
+from models.local_embedding.pymilvus_embedding import PyMilvusEmbedding
 # Current Project Modules
-from pylang.logger import Logger
-from pylang.utils.Utils import filepath, join_paths, current_dir, filedir, parent_dir
-from vectordb.milvus.Configuration import Configuration
+from pylang.logger import logger
+from pylang.utils.utils import filepath, join_paths, current_dir, filedir, parent_dir
+from vectordb.milvus.configuration import Configuration
 
 logger = Logger.get_root_logger()
 

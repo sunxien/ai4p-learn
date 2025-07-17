@@ -16,7 +16,7 @@
 from sentence_transformers import SentenceTransformer
 
 # Current Project Modules
-from pylang.logger import Logger
+from pylang.logger import logger
 
 logger = Logger.get_root_logger()
 

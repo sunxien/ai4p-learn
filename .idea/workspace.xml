@@ -6,19 +6,33 @@
   <component name="ChangeListManager">
     <list default="true" id="4cdad40a-2f65-42ea-aa6b-291ea15da0fe" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/chunking/LengthBasedChunking.py" beforeDir="false" afterPath="$PROJECT_DIR$/documents/chunking/LengthBasedChunking.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/chunking/TextStructuredBasedChunking.py" beforeDir="false" afterPath="$PROJECT_DIR$/documents/chunking/TextStructuredBasedChunking.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/extractor/PDFExtractor.py" beforeDir="false" afterPath="$PROJECT_DIR$/documents/extractor/PDFExtractor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/extractor/TxTExtractor.py" beforeDir="false" afterPath="$PROJECT_DIR$/documents/extractor/TxTExtractor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/resources/Resources.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/Resources.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/resources/hot_news.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/hot_news.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/resources/prompt_template_en.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/resources/prompt_template_en.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/chunking/DocumentStructuredBasedChunking.py" beforeDir="false" afterPath="$PROJECT_DIR$/documents/chunking/document_structured_based_chunking.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/chunking/LengthBasedChunking.py" beforeDir="false" afterPath="$PROJECT_DIR$/documents/chunking/length_based_chunking.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/chunking/SemanticMeaningBasedChunking.py" beforeDir="false" afterPath="$PROJECT_DIR$/documents/chunking/semantic_meaning_based_chunking.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/chunking/TextStructuredBasedChunking.py" beforeDir="false" afterPath="$PROJECT_DIR$/documents/chunking/text_structured_based_chunking.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/extractor/PDFExtractor.py" beforeDir="false" afterPath="$PROJECT_DIR$/documents/extractor/pdf_extractor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/extractor/TxTExtractor.py" beforeDir="false" afterPath="$PROJECT_DIR$/documents/extractor/txt_extractor.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/local_reranker/BgeBaseReranker.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/local_reranker/BgeBaseReranker.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/local_reranker/CrossEncoderWithBgeBaseReranker.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/local_reranker/CrossEncoderWithBgeBaseReranker.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/KnowledgeFile.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vectordb/milvus/temp/default.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/local_embedding/M3eBaseEmbedding.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/local_embedding/m3e_base_embedding.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/local_embedding/PyMilvusEmbedding.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/local_embedding/pymilvus_embedding.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/local_reranker/BgeBaseReranker.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/local_reranker/bge_base_reranker.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/local_reranker/CrossEncoderWithBgeBaseReranker.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/local_reranker/cross_encoder_with_bge_base_reranker.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/open_api/Response.py" beforeDir="false" afterPath="$PROJECT_DIR$/open_api/response.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/open_api/WebServer.py" beforeDir="false" afterPath="$PROJECT_DIR$/open_api/web_server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pylang/errors/Errors.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylang/errors/errors.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pylang/logger/Logger.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylang/logger/logger.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pylang/utils/Utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/pylang/utils/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/Resources.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources/local_resources.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/RAGService.py" beforeDir="false" afterPath="$PROJECT_DIR$/service/rag_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/WeatherService.py" beforeDir="false" afterPath="$PROJECT_DIR$/service/weather_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/pylang/utils/UtilsTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/pylang/utils/utils_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/resoures/WeatherServiceTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/resoures/weather_service_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vectordb/chroma/ChromaOperator.py" beforeDir="false" afterPath="$PROJECT_DIR$/vectordb/chroma/chroma_operator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vectordb/chroma/Configuration.py" beforeDir="false" afterPath="$PROJECT_DIR$/vectordb/chroma/configuration.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vectordb/milvus/Configuration.py" beforeDir="false" afterPath="$PROJECT_DIR$/vectordb/milvus/configuration.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vectordb/milvus/MilvusOperator.py" beforeDir="false" afterPath="$PROJECT_DIR$/vectordb/milvus/milvus_operator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vectordb/milvus/temp/default.db" beforeDir="false" afterPath="$PROJECT_DIR$/vectordb/milvus/temp/default.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +66,7 @@
     "Python tests.Python tests for UtilsTest.test_repeat_star.executor": "Run",
     "Python.BgeBaseReranker.executor": "Run",
     "Python.CrossEncoderWithBgeBaseReranker.executor": "Run",
+    "Python.FuntionCalls.executor": "Run",
     "Python.LengthBasedChunking.executor": "Run",
     "Python.Logger (1).executor": "Run",
     "Python.Logger.executor": "Run",
@@ -62,6 +77,7 @@
     "Python.PDFExtractor.executor": "Run",
     "Python.PDFSplitter.executor": "Run",
     "Python.PyMilvusEmbedding.executor": "Run",
+    "Python.QwenAgent.executor": "Run",
     "Python.RAGService.executor": "Run",
     "Python.Resources.executor": "Run",
     "Python.Response.executor": "Run",
@@ -74,21 +90,22 @@
     "Python.__init__ (1).executor": "Run",
     "Python.__init__ (2).executor": "Run",
     "Python.__init__.executor": "Run",
+    "Python.chat_agent_with_tools.executor": "Run",
     "Python.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "/Users/sunxien/Repository/git/ai4p-learn",
+    "last_opened_file_path": "/Users/sunxien/Repository/git/ai4p-learn/external_calls/mcp_calls",
     "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/external_calls/mcp_calls" />
+      <recent name="$PROJECT_DIR$/external_calls/function_calls" />
+      <recent name="$PROJECT_DIR$/external_calls" />
+      <recent name="$PROJECT_DIR$/external_calls/tool_calls" />
       <recent name="$PROJECT_DIR$/openapi" />
-      <recent name="$PROJECT_DIR$/documents/chunking" />
-      <recent name="$PROJECT_DIR$/documents/splitter" />
-      <recent name="$PROJECT_DIR$/vectordb/milvus" />
-      <recent name="$PROJECT_DIR$/vectordb/chroma" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/resources" />
@@ -97,8 +114,74 @@
       <recent name="$PROJECT_DIR$/documents/resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.WeatherService">
-    <configuration name="BgeBaseReranker" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.chat_agent_with_tools">
+    <configuration name="FunctionCalls" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ai4p-learn" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/multi_agents/function_calls" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/multi_agents/function_calls/FunctionCalls.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="QwenAgent" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ai4p-learn" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/multi_agents/function_calls" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/multi_agents/function_calls/QwenAgent.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="chat_agent_with_tools" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ai4p-learn" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/external_calls/tool_calls" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/external_calls/tool_calls/chat_agent_with_tools.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="cross_encoder_with_bge_base_reranker" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ai4p-learn" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -111,7 +194,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/models/local_reranker/BgeBaseReranker.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/models/local_reranker/cross_encoder_with_bge_base_reranker.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -120,7 +203,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Resources" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="txt_extractor" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ai4p-learn" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -129,77 +212,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/resources" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/documents/extractor" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/resources/Resources.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="WeatherService" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="ai4p-learn" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/service" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/service/WeatherService.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="WeatherServiceTest" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="ai4p-learn" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/resoures" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/resoures/WeatherServiceTest.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="ai4p-learn" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/documents/extractor/txt_extractor.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -210,11 +227,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.WeatherService" />
-        <item itemvalue="Python.WeatherServiceTest" />
-        <item itemvalue="Python.Resources" />
-        <item itemvalue="Python.BgeBaseReranker" />
-        <item itemvalue="Python.main" />
+        <item itemvalue="Python.chat_agent_with_tools" />
+        <item itemvalue="Python.QwenAgent" />
+        <item itemvalue="Python.FunctionCalls" />
+        <item itemvalue="Python.cross_encoder_with_bge_base_reranker" />
+        <item itemvalue="Python.txt_extractor" />
       </list>
     </recent_temporary>
   </component>
@@ -247,15 +264,6 @@
     </option>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/service/WeatherService.py</url>
-          <line>69</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
         <watch expression="type(related_doc)" />

@@ -1,7 +1,7 @@
 # Current Project Modules
-from pylang.logger import Logger
-from pylang.utils.Utils import *
-from service.RAGService import *
+from pylang.logger import logger
+from pylang.utils.utils import *
+from service.rag_service import *
 
 logger = Logger.get_root_logger()
 

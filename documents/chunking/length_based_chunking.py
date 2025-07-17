@@ -29,9 +29,9 @@
 from langchain_text_splitters import CharacterTextSplitter
 
 # Current Project Modules
-from resources import Resources
-from pylang.logger import Logger
-from pylang.utils import Utils
+from resources import local_resources
+from pylang.logger import logger
+from pylang.utils import utils
 
 logger = Logger.get_root_logger()
 
@@ -55,7 +55,7 @@ def split_documents(documents: list):
 
 # Main
 if __name__ == "__main__":
-    split_docs = split_content(Resources.content)
+    split_docs = split_content(local_resources.content)
     for (page_no, split_doc) in enumerate(split_docs):
         logger.info(f"{split_doc}")
-        logger.info(f"{Utils.repeat_star(64)} Page.{page_no} {Utils.repeat_star(64)}")
+        logger.info(f"{utils.repeat_star(64)} Page.{page_no} {utils.repeat_star(64)}")

@@ -12,21 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import logging
+from pylang.utils import utils
 
-logging.basicConfig(
-    level=logging.WARN,
-    format="%(asctime)s [%(name)s:%(thread)d] %(levelname)s %(filename)s[:%(lineno)d] %(message)s",
-    datefmt="%Y-%m-%d %H:%M:%S"
-    # filename="ai4p-learn.log"
-)
-
-def get_root_logger():
-    return logging
-
-def get_logger(logger_name: str):
-    return logging.getLogger(logger_name)
-
-if __name__ == "__main__":
-    logger = get_root_logger()
-    logger.info("Hello World")
+def test_repeat_star():
+    result = utils.repeat_star(3)
+    assert result == "***"

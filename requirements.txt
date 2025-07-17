@@ -23,6 +23,11 @@ transformers==4.48.0  # BetterTransformer requires transformers<4.49 but found 4
 modelscope==1.28.0
 infinity-emb==0.0.76
 optimum==1.26.1 # NameError: name 'BetterTransformerManager' is not defined
+# FlashRank==0.2.10
+dashscope==1.23.8
+openai==1.95.1
+qwen-agent==0.0.27
+
 
 
 # Framework

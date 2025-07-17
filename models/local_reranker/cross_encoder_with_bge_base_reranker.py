@@ -22,9 +22,10 @@ from langchain_huggingface import HuggingFaceEmbeddings
 from langchain.retrievers import ContextualCompressionRetriever
 from langchain.retrievers.document_compressors import CrossEncoderReranker
 from langchain_community.cross_encoders import HuggingFaceCrossEncoder
+from langchain_community.document_compressors import FlashrankRerank
 
 # Current Project Modules
-from pylang.logger import Logger
+from pylang.logger import logger
 logger = Logger.get_root_logger()
 
 class CrossEncoderWithBgeReranker:
@@ -40,32 +41,48 @@ class CrossEncoderWithBgeReranker:
 
     def reranking_contents(self, query: str, docs: list):
         return ContextualCompressionRetriever(
+            # base_compressor=FlashrankRerank(client=Ranker()),
             base_compressor=CrossEncoderReranker(model=self.rerankerModel, top_n=3),
+
             # # FIXME <MilvusException: (code=2, message=Fail connecting to server on localhost:19530, illegal connection params or server unavailable)>
-            # base_retriever=Milvus.from_texts(docs, self.embeddingsModel).as_retriever(
+            # base_retriever=Milvus.from_texts(
+            #     texts=docs,
+            #     embedding=self.embeddingsModel,
+            #     drop_old=True
+            # ).as_retriever(
             #     search_kwargs={"k": 10}
             # ),
-            base_retriever = FAISS.from_texts(docs, self.embeddingsModel).as_retriever(
+            base_retriever = FAISS.from_texts(
+                texts=docs,
+                embedding=self.embeddingsModel
+            ).as_retriever(
                 search_kwargs={"k": 10}
             )
         ).invoke(query)
 
-
     def reranking_documents(self, query: str, docs: list):
         return ContextualCompressionRetriever(
+            # base_compressor=FlashrankRerank(client=Ranker()),
             base_compressor=CrossEncoderReranker(model=self.rerankerModel, top_n=3),
+
             # # FIXME <MilvusException: (code=2, message=Fail connecting to server on localhost:19530, illegal connection params or server unavailable)>
-            # base_retriever=Milvus.from_documents(docs, self.embeddingsModel).as_retriever(
+            # base_retriever=Milvus.from_documents(
+            #     documents=docs,
+            #     embedding=self.embeddingsModel
+            # ).as_retriever(
             #     search_kwargs={"k": 10}
             # ),
-            base_retriever=FAISS.from_documents(docs, self.embeddingsModel).as_retriever(
+            base_retriever=FAISS.from_documents(
+                documents=docs,
+                embedding=self.embeddingsModel
+            ).as_retriever(
                 search_kwargs={"k": 10}
             )
         ).invoke(query)
 
 
 #
-query='what is a panda?'
+question='what is a panda?'
 
 docs = [
     'The giant panda (Ailuropoda melanoleuca), sometimes called a panda bear',
@@ -80,12 +97,12 @@ if __name__ == "__main__":
     # embedding_model_name="sentence-transformers/msmarco-distilbert-dot-v5"
 
     from modelscope import snapshot_download
-    embedding_model_name = snapshot_download("AI-ModelScope/m3e-base", revision='master')
+    embedding_model = snapshot_download("AI-ModelScope/m3e-base", revision='master')
 
-    reranker_model_name="BAAI/bge-reranker-base"
+    reranker_model="BAAI/bge-reranker-base"
 
-    reranker = CrossEncoderWithBgeReranker(embedding_model_name, reranker_model_name)
-    reranking_docs = reranker.reranking_contents(query, docs)
+    reranker = CrossEncoderWithBgeReranker(embedding_model, reranker_model)
+    reranking_docs = reranker.reranking_contents(question, docs)
 
     # Document list
     for ranking_doc in reranking_docs:
