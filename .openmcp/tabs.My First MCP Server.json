@@ -1,0 +1,258 @@
+{
+  "clientId": "332bb303-b303-5bb303871c9-8bb303871c9a692-9a6924b6",
+  "currentIndex": 0,
+  "tabs": [
+    {
+      "name": "Tools",
+      "icon": "icon-tool",
+      "type": "blank",
+      "componentIndex": 2,
+      "storage": {
+        "activeNames": [
+          1,
+          0
+        ],
+        "autoDetectDiagram": {
+          "edges": [],
+          "views": [
+            {
+              "tool": {
+                "name": "add",
+                "description": "对两个整数求和",
+                "inputSchema": {
+                  "type": "object",
+                  "properties": {
+                    "a": {
+                      "type": "integer"
+                    },
+                    "b": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "a",
+                    "b"
+                  ]
+                }
+              },
+              "status": "success",
+              "function": {
+                "name": "add",
+                "arguments": "{\"a\":\"5\",\"b\":\"3\"}"
+              },
+              "result": [
+                {
+                  "type": "text",
+                  "text": "8"
+                }
+              ],
+              "createAt": 1752940405814,
+              "finishAt": 1752940413823,
+              "llmTimecost": 8001,
+              "toolcallTimecost": 7
+            }
+          ]
+        },
+        "formData": {
+          "a": 4,
+          "b": 3
+        },
+        "currentToolName": "add",
+        "lastToolCallResponse": {
+          "content": [
+            {
+              "type": "text",
+              "text": "7"
+            }
+          ],
+          "isError": false
+        }
+      }
+    },
+    {
+      "name": "Resources",
+      "icon": "icon-file",
+      "type": "blank",
+      "componentIndex": 0,
+      "storage": {
+        "activeNames": [
+          0
+        ],
+        "formData": {
+          "name": "sunxien"
+        },
+        "templateActiveNames": [],
+        "currentType": "template",
+        "currentResourceName": "greeting",
+        "lastResourceReadResponse": {
+          "contents": [
+            {
+              "uri": "greeting://sunxien",
+              "mimeType": "text/plain",
+              "text": "Hello, sunxien!"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Prompts",
+      "icon": "icon-chat",
+      "type": "blank",
+      "componentIndex": 1,
+      "storage": {
+        "activeNames": [
+          0
+        ],
+        "formData": {
+          "content": "Hello, My Name is Eric"
+        },
+        "currentPromptName": "translate",
+        "lastPromptGetResponse": {
+          "description": "进行翻译的提示prompt",
+          "messages": [
+            {
+              "role": "user",
+              "content": {
+                "type": "text",
+                "text": "请将下面的内容翻译成中文：\n\nHello, My Name is Eric"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Interaction Test",
+      "icon": "icon-robot",
+      "type": "blank",
+      "componentIndex": 3,
+      "storage": {
+        "activeNames": [
+          0
+        ],
+        "messages": [
+          {
+            "role": "user",
+            "content": "请帮我算一下两个月的工资总共收入是多少？6月份是50000，7月份是54000.",
+            "extraInfo": {
+              "created": 1752939005302,
+              "state": "success",
+              "serverName": "qwen",
+              "enableXmlWrapper": false
+            }
+          },
+          {
+            "role": "assistant",
+            "content": "",
+            "tool_calls": [
+              {
+                "id": "call_2cd561c6c4df497cb0dcd0",
+                "index": 0,
+                "type": "function",
+                "function": {
+                  "name": "add",
+                  "arguments": "{\"a\": 50000, \"b\": 54000}"
+                }
+              }
+            ],
+            "extraInfo": {
+              "created": 1752939007100,
+              "state": "success",
+              "serverName": "qwen",
+              "enableXmlWrapper": false
+            }
+          },
+          {
+            "role": "tool",
+            "index": 0,
+            "tool_call_id": "call_2cd561c6c4df497cb0dcd0",
+            "content": [
+              {
+                "type": "text",
+                "text": "104000"
+              }
+            ],
+            "extraInfo": {
+              "created": 1752939007116,
+              "state": "success",
+              "serverName": "qwen",
+              "enableXmlWrapper": false
+            }
+          },
+          {
+            "role": "assistant",
+            "content": "两个月的工资总收入是104000。",
+            "extraInfo": {
+              "created": 1752939009332,
+              "state": "success",
+              "serverName": "qwen",
+              "enableXmlWrapper": false
+            }
+          },
+          {
+            "role": "user",
+            "content": "go big or go home 请将下面的内容翻译成中文：\n\ngo big or go home ",
+            "extraInfo": {
+              "created": 1752939083812,
+              "state": "success",
+              "serverName": "qwen",
+              "enableXmlWrapper": false
+            }
+          },
+          {
+            "role": "assistant",
+            "content": "这句话 “go big or go home” 可以翻译成中文：“要么大干一场，要么干脆别干。” 这是一个鼓励人们全力以赴、大胆尝试的表达。",
+            "extraInfo": {
+              "created": 1752939086362,
+              "state": "success",
+              "serverName": "qwen",
+              "enableXmlWrapper": false
+            }
+          },
+          {
+            "role": "user",
+            "content": "请帮我搜索几张明日方舟的图片",
+            "extraInfo": {
+              "created": 1752939235860,
+              "state": "success",
+              "serverName": "qwen",
+              "enableXmlWrapper": false
+            }
+          }
+        ],
+        "settings": {
+          "modelIndex": 2,
+          "enableTools": [
+            {
+              "name": "add",
+              "description": "对两个整数求和",
+              "inputSchema": {
+                "type": "object",
+                "properties": {
+                  "a": {
+                    "type": "integer"
+                  },
+                  "b": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "a",
+                  "b"
+                ]
+              },
+              "enabled": true
+            }
+          ],
+          "enableWebSearch": false,
+          "temperature": 0.6,
+          "contextLength": 100,
+          "systemPrompt": "Default",
+          "enableXmlWrapper": false,
+          "parallelToolCalls": true
+        }
+      }
+    }
+  ]
+}

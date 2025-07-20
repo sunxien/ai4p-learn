@@ -27,6 +27,7 @@ optimum==1.26.1 # NameError: name 'BetterTransformerManager' is not defined
 dashscope==1.23.8
 openai==1.95.1
 qwen-agent==0.0.27
+fastmcp>=2.10.5
 
 
 

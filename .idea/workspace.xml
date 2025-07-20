@@ -6,8 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="4cdad40a-2f65-42ea-aa6b-291ea15da0fe" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/external_calls/mcp_calls/mcp_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/external_calls/mcp_calls/sse/mcp_client_sse.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/external_calls/mcp_calls/mcp_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/external_calls/mcp_calls/sse/mcp_server_sse.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/external_calls/mcp_calls/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/external_calls/mcp_calls/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/external_calls/mcp_calls/sse/mcp_server_sse.py" beforeDir="false" afterPath="$PROJECT_DIR$/external_calls/mcp_calls/sse/mcp_server_sse.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/external_calls/mcp_calls/stdio/mcp_server_stdio.py" beforeDir="false" afterPath="$PROJECT_DIR$/external_calls/mcp_calls/stdio/mcp_server_stdio.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/external_calls/mcp_calls/streamhttp/mcp_server_streamhttp.py" beforeDir="false" afterPath="$PROJECT_DIR$/external_calls/mcp_calls/streamhttp/mcp_server_streamhttp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +76,8 @@
     "Python.func_decorator.executor": "Run",
     "Python.logger.executor": "Run",
     "Python.main.executor": "Run",
+    "Python.mcp_server_sse.executor": "Run",
+    "Python.mymcp_server.executor": "Run",
     "Python.register.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -89,14 +95,14 @@
       <recent name="$PROJECT_DIR$/external_calls" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/external_calls/mcp_calls" />
+      <recent name="$PROJECT_DIR$/mcps" />
       <recent name="$PROJECT_DIR$/external_calls/mcp_calls/sse" />
       <recent name="$PROJECT_DIR$/resources" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/service" />
-      <recent name="$PROJECT_DIR$/documents/resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.__init__ (1)">
+  <component name="RunManager" selected="Python.mcp_server_sse">
     <configuration name="__init__ (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ai4p-learn" />
       <option name="ENV_FILES" value="" />
@@ -111,28 +117,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pylang/register/__init__.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="__init__" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="ai4p-learn" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pylang/decorator" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pylang/decorator/__init__.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -163,7 +147,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="func_decorator" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="mcp_server_sse" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ai4p-learn" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -172,11 +156,33 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pylang/decorator" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/external_calls/mcp_calls/sse" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pylang/decorator/func_decorator.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/external_calls/mcp_calls/sse/mcp_server_sse.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="mymcp_server" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ai4p-learn" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/external_calls/mcp_servers" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/external_calls/mcp_calls/mymcp_server.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -202,11 +208,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.mcp_server_sse" />
+        <item itemvalue="Python.mymcp_server" />
         <item itemvalue="Python.__init__ (1)" />
         <item itemvalue="Python tests.Python tests in __init__.py" />
         <item itemvalue="Python.class_decorator" />
-        <item itemvalue="Python.func_decorator" />
-        <item itemvalue="Python.__init__" />
       </list>
     </recent_temporary>
   </component>
@@ -239,6 +245,15 @@
     </option>
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file:///opt/miniconda3/envs/ai4p-learn/lib/python3.10/site-packages/mcp/server/fastmcp/server.py</url>
+          <line>144</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
         <watch expression="type(related_doc)" />

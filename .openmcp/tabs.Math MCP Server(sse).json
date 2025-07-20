@@ -1,0 +1,35 @@
+{
+  "clientId": "0affe33d-e33d-5fe33d65ffc-8fe33d65ffc0718-c07186ca",
+  "currentIndex": 0,
+  "tabs": [
+    {
+      "name": "Tools",
+      "icon": "icon-tool",
+      "type": "blank",
+      "componentIndex": 2,
+      "storage": {
+        "activeNames": [
+          0
+        ],
+        "autoDetectDiagram": {
+          "edges": [],
+          "views": []
+        },
+        "formData": {
+          "a": 3,
+          "b": 2
+        },
+        "currentToolName": "add",
+        "lastToolCallResponse": {
+          "content": [
+            {
+              "type": "text",
+              "text": "5"
+            }
+          ],
+          "isError": false
+        }
+      }
+    }
+  ]
+}

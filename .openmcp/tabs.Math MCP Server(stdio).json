@@ -1,0 +1,28 @@
+{
+  "clientId": "ab7ec83c-c83c-5ec83c91754-8ec83c91754b713-4b713758",
+  "currentIndex": 1,
+  "tabs": [
+    {
+      "name": "Blank Test",
+      "icon": "icon-blank",
+      "type": "blank",
+      "componentIndex": -1,
+      "storage": {
+        "activeNames": [
+          0
+        ]
+      }
+    },
+    {
+      "name": "Blank Test",
+      "icon": "icon-blank",
+      "type": "blank",
+      "componentIndex": -1,
+      "storage": {
+        "activeNames": [
+          0
+        ]
+      }
+    }
+  ]
+}
