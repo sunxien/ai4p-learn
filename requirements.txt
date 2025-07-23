@@ -31,12 +31,20 @@ fastmcp>=2.10.5
 
 
 
+
+
+
 # Framework
 huggingface-hub~=0.33.4
 langchain==0.3.26
 langchain-community==0.3.27 # For CrossEncoderReranker
 langchain-huggingface==0.3.0 # For CrossEncoderReranker
 faiss-cpu==1.11.0 # Could not import faiss python package.
+langchain-openai==0.3.28
+langchain-core==0.3.69
+langgraph==0.5.3
+langchain-tavily==0.2.10
+
 
 
 # VectorDB

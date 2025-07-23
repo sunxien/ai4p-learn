@@ -6,11 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4cdad40a-2f65-42ea-aa6b-291ea15da0fe" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/external_calls/mcp_calls/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/external_calls/mcp_calls/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/external_calls/mcp_calls/sse/mcp_server_sse.py" beforeDir="false" afterPath="$PROJECT_DIR$/external_calls/mcp_calls/sse/mcp_server_sse.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/external_calls/mcp_calls/stdio/mcp_server_stdio.py" beforeDir="false" afterPath="$PROJECT_DIR$/external_calls/mcp_calls/stdio/mcp_server_stdio.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/external_calls/mcp_calls/streamhttp/mcp_server_streamhttp.py" beforeDir="false" afterPath="$PROJECT_DIR$/external_calls/mcp_calls/streamhttp/mcp_server_streamhttp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -74,11 +69,17 @@
     "Python.chat_agent_with_tools.executor": "Run",
     "Python.class_decorator.executor": "Run",
     "Python.func_decorator.executor": "Run",
+    "Python.intent_detection.executor": "Run",
+    "Python.locking.executor": "Run",
     "Python.logger.executor": "Run",
     "Python.main.executor": "Run",
     "Python.mcp_server_sse.executor": "Run",
+    "Python.multi_processing.executor": "Run",
+    "Python.multi_threading.executor": "Run",
     "Python.mymcp_server.executor": "Run",
     "Python.register.executor": "Debug",
+    "Python.single_agent.executor": "Run",
+    "Python.thread_pool_executor.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
@@ -102,8 +103,8 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.mcp_server_sse">
-    <configuration name="__init__ (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.multi_processing">
+    <configuration name="locking" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ai4p-learn" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -112,11 +113,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pylang/register" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pylang/concurrent" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pylang/register/__init__.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pylang/concurrent/locking.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -125,7 +126,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="class_decorator" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="multi_processing" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ai4p-learn" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -134,11 +135,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pylang/decorator" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pylang/concurrent" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pylang/decorator/class_decorator.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pylang/concurrent/multi_processing.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -147,7 +148,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="mcp_server_sse" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="multi_threading" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ai4p-learn" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -156,11 +157,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/external_calls/mcp_calls/sse" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pylang/concurrent" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/external_calls/mcp_calls/sse/mcp_server_sse.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pylang/concurrent/multi_threading.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -169,7 +170,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="mymcp_server" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="single_agent" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ai4p-learn" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -178,11 +179,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/external_calls/mcp_servers" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/multi_agents" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/external_calls/mcp_calls/mymcp_server.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/multi_agents/single_agent.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -191,28 +192,35 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests in __init__.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="thread_pool_executor" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ai4p-learn" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pylang/register" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pylang/concurrent" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/pylang/register/__init__.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pylang/concurrent/thread_pool_executor.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.mcp_server_sse" />
-        <item itemvalue="Python.mymcp_server" />
-        <item itemvalue="Python.__init__ (1)" />
-        <item itemvalue="Python tests.Python tests in __init__.py" />
-        <item itemvalue="Python.class_decorator" />
+        <item itemvalue="Python.multi_processing" />
+        <item itemvalue="Python.locking" />
+        <item itemvalue="Python.multi_threading" />
+        <item itemvalue="Python.thread_pool_executor" />
+        <item itemvalue="Python.single_agent" />
       </list>
     </recent_temporary>
   </component>
